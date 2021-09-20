@@ -1,0 +1,24 @@
+servers:
+  - name: uvicorn
+    url: https://www.uvicorn.org/
+  - name: gunicorn
+    description: Gunicorn with Uvicorn workers
+    url: https://gunicorn.org/
+  - name: daphne
+    url: https://github.com/django/daphne
+  - name: hypercorn
+    url: https://pgjones.gitlab.io/hypercorn/
+apps:
+  - name: fastapi
+    url: https://fastapi.tiangolo.com/
+  - name: starlette
+    url: https://www.starlette.io/
+cases:
+  - name: servers
+    description: Study the performance of servers
+    servers: [uvicorn, gunicorn, daphne, hypercorn]
+    apps: [fastapi]
+  - name: fastapi-json
+    description: Study the performance of FastAPI using different JSON response classes
+    servers: [uvicorn]
+    apps: [fastapi, fastapi-orjson, fastapi-ujson]

@@ -1,0 +1,15 @@
+# Servers
+hypercorn==0.11.2
+daphne==3.0.2
+uvicorn[standard]==0.15.0
+gunicorn==20.1.0
+
+# Frameworks
+fastapi==0.68.1
+python-rapidjson==1.4
+python-multipart==0.0.5
+
+# Linters
+flake8==3.9.2
+black==21.9b0
+isort==5.9.3

@@ -1,0 +1,11 @@
+## FastAPI JSON
+
+Study the performance of FastAPI using different JSON response classes.
+
+## Results
+
+| Application | Server | Requests | Requests/sec | Latency 50% (ms) | Latency 75% (ms) | Latency Avg (ms) |
+| --------- | -----------: | -----------: |-----------: | ---------------: | ---------------: | ---------------: |
+{% for res in results -%}
+| {{ res.app }} | {{res.server}} | {{ res.req }} | {{res.reqs}} | {{ res.lt50 }} | {{ res.lt75 }} | {{ res.lt_avg }}
+{% endfor %}
