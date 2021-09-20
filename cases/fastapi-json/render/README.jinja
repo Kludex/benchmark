@@ -2,10 +2,37 @@
 
 Study the performance of FastAPI using different JSON response classes.
 
+The study was made using the following applications:
+
+- `[fastapi](https://github.com/Kludex/benchmark/tree/main/apps/fastapi)`: FastAPI application using the default `JSONResponse` class.
+- `[fastapi-ujson](https://github.com/Kludex/benchmark/tree/main/apps/fastapi-ujson)`: FastAPI application using the `UJSONResponse` class.
+- `[fastapi-orjson](https://github.com/Kludex/benchmark/tree/main/apps/fastapi-orjson)`: FastAPI application using the `ORJSONResponse` class.
+- `[fastapi-rapidjson](https://github.com/Kludex/benchmark/tree/main/apps/fastapi-rapidjson)`: FastAPI application using a custom `RapidJSONResponse` class.
+
 ## Results
 
-| Application | Server | Requests | Requests/sec | Latency 50% (ms) | Latency 75% (ms) | Latency Avg (ms) |
-| --------- | -----------: | -----------: |-----------: | ---------------: | ---------------: | ---------------: |
+| Application | Requests | Requests/sec | Latency 50% (ms) | Latency 75% (ms) | Latency Avg (ms) |
+| --------- | -----------: |-----------: | ---------------: | ---------------: | ---------------: |
 {% for res in results -%}
-| {{ res.app }} | {{res.server}} | {{ res.req }} | {{res.reqs}} | {{ res.lt50 }} | {{ res.lt75 }} | {{ res.lt_avg }}
+| {{ res.app }} | {{ res.req }} | {{res.reqs}} | {{ res.lt50 }} | {{ res.lt75 }} | {{ res.lt_avg }}
 {% endfor %}
+
+## Observations
+
+Results may vary depending on the JSON body. For more information about each JSON package used,
+check [orjson](https://github.com/ijl/orjson), [ujson](https://github.com/ultrajson/ultrajson)
+and [rapidjson](https://github.com/python-rapidjson/python-rapidjson).
+
+The following JSON body was used here:
+```json
+{
+    "timestamp": 1556283673.1523004,
+    "task_uuid": "0ed1a1c3-050c-4fb9-9426-a7e72d0acfc7",
+    "task_level": [1, 2, 3],
+    "action_status": "started",
+    "action_type": "main",
+    "key": "value",
+    "another_key": 123,
+    "and_another": ["a", "b"]
+}
+```
