@@ -4,10 +4,10 @@ Study the performance of FastAPI using different JSON response classes.
 
 The study was made using the following applications:
 
-- `[fastapi](https://github.com/Kludex/benchmark/tree/main/apps/fastapi)`: FastAPI application using the default `JSONResponse` class.
-- `[fastapi-ujson](https://github.com/Kludex/benchmark/tree/main/apps/fastapi-ujson)`: FastAPI application using the `UJSONResponse` class.
-- `[fastapi-orjson](https://github.com/Kludex/benchmark/tree/main/apps/fastapi-orjson)`: FastAPI application using the `ORJSONResponse` class.
-- `[fastapi-rapidjson](https://github.com/Kludex/benchmark/tree/main/apps/fastapi-rapidjson)`: FastAPI application using a custom `RapidJSONResponse` class.
+- [`fastapi`](https://github.com/Kludex/benchmark/tree/main/apps/fastapi): FastAPI application using the default `JSONResponse` class.
+- [`fastapi-ujson`](https://github.com/Kludex/benchmark/tree/main/apps/fastapi-ujson): FastAPI application using the `UJSONResponse` class.
+- [`fastapi-orjson`](https://github.com/Kludex/benchmark/tree/main/apps/fastapi-orjson): FastAPI application using the `ORJSONResponse` class.
+- [`fastapi-rapidjson`](https://github.com/Kludex/benchmark/tree/main/apps/fastapi-rapidjson): FastAPI application using a custom `RapidJSONResponse` class.
 
 ## Results
 
